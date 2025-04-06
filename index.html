@@ -19,6 +19,7 @@
     <title>Cake Delight - Premium Bakery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -57,6 +58,7 @@
         .testimonial-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
         }
 
         .menu-tab.active {
@@ -97,7 +99,7 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <button class="text-gray-700 hover:text-pink-600">
+                <button class="text-gray-700 hover:text-pink-600" aria-label="Search">
                     <i class="fas fa-search text-lg"></i>
                 </button>
                 <button class="text-gray-700 hover:text-pink-600 relative">
@@ -105,7 +107,7 @@
                     <span
                         class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
                 </button>
-                <button class="md:hidden text-gray-700">
+                <button class="md:hidden text-gray-700" aria-label="Open menu">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -625,7 +627,7 @@
                     <form class="flex">
                         <input type="email" placeholder="Your email"
                             class="px-4 py-3 rounded-l-lg focus:outline-none text-gray-800 w-full">
-                        <button type="submit" class="bg-pink-600 hover:bg-pink-700 px-4 py-3 rounded-r-lg transition">
+                        <button type="submit" class="bg-pink-600 hover:bg-pink-700 px-4 py-3 rounded-r-lg transition" aria-label="Subscribe to newsletter">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -655,7 +657,7 @@
 
     <!-- Back to Top Button -->
     <button id="backToTop"
-        class="fixed bottom-6 left-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg hidden transition">
+        class="fixed bottom-6 left-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg hidden transition" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
